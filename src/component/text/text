@@ -1,0 +1,74 @@
+// import React, { useState, useEffect, useRef } from 'react';
+
+// const Navbar = () => {
+//   const [activeIndex, setActiveIndex] = useState(0);
+//   const hoverLineRef = useRef(null);
+//   const navRef = useRef(null);
+
+//   const navItems = [
+//     { name: 'Home', link: '#', active: true },
+//     { name: 'About', link: '#' },
+//     { name: 'Services ▾', link: '#' },
+//     { name: 'Team ▾', link: '#' },
+//     { name: 'Pages', link: '#' },
+//   ];
+
+//   useEffect(() => {
+//     const activeItem = navRef.current.querySelector('.active');
+//     if (activeItem) {
+//       updateHoverLinePosition(activeItem);
+//     }
+//   }, []);
+
+//   const updateHoverLinePosition = (item) => {
+//     const { offsetLeft, offsetWidth } = item;
+//     hoverLineRef.current.style.left = `${offsetLeft}px`;
+//     hoverLineRef.current.style.width = `${offsetWidth}px`;
+//   };
+
+//   const handleMouseEnter = (index, event) => {
+//     setActiveIndex(index);
+//     updateHoverLinePosition(event.target);
+//   };
+
+//   const handleMouseLeave = () => {
+//     const activeItem = navRef.current.querySelector('.active');
+//     if (activeItem) {
+//       updateHoverLinePosition(activeItem);
+//     }
+//   };
+
+//   return (
+//     <div className="relative">
+//       <nav
+//         className="bg-white py-4"
+//         ref={navRef}
+//         onMouseLeave={handleMouseLeave}
+//       >
+//         <ul className="flex justify-center space-x-10 relative">
+//           {navItems.map((item, index) => (
+//             <li key={index}>
+//               <a
+//                 href={item.link}
+//                 className={`font-medium nav-item ${
+//                   item.active ? 'text-orange-500 active' : 'text-black'
+//                 }`}
+//                 onMouseEnter={(e) => handleMouseEnter(index, e)}
+//               >
+//                 {item.name}
+//               </a>
+//             </li>
+//           ))}
+//         </ul>
+//         <div
+//           ref={hoverLineRef}
+//           className="absolute bottom-0 h-[2px] bg-orange-500 transition-all duration-300"
+//         ></div>
+//       </nav>
+//     </div>
+//   );
+// };
+
+// export default Navbar;
+
+

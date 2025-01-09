@@ -7,18 +7,20 @@ export default {
   theme: {
     extend: {
       maxWidth: {
-        Container: '1280px',
+        Container: '1400px',
       },
       colors: {
         top : '#3661FC',
         bc: '#708FFF',
-        Ic: '#FE681E'
+        Ic: '#FE681E',
+        bl:'#1A1A1A'
       },
       fontFamily: {
-      GF: ['Afacad Flux'],
-      
-        
+      dm: ['DM Mono'],
       },
+      backgroundImage: {
+        banneri: "url('./public/img/Add your image here.png')",
+      }
     },
   },
   plugins: [],

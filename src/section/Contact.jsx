@@ -14,20 +14,20 @@ import { FaYoutube } from "react-icons/fa6";
 const Contact = () => {
   return (
     <>
-    <Container>
-        <div className="w-[90%] bg-top rounded-r-full flex justify-between">
-          <div className="flex">            
-            <p className='font-GF text-white text-sm pl-10 pr-5'>Welcome to Ortencey Digital Market Agency</p>
+    <Container className={'pt-3'}>
+        <div className="w-[85%] h-7 bg-top rounded-r-full flex justify-between">
+          <div className="flex items-center">            
+            <p className='font-dm text-white text-xs pl-20 pr-5'>Welcome to Ortencey Digital Market Agency</p>
             <div className="w-[1px] h-4  bg-bc flex self-center"></div>
             <div className="flex items-center px-3 gap-x-1">
-            <FaPhoneAlt className='text-Ic' />
-            <data value="number" className='text-white'>+88 ( 5548 ) 6548</data>
+            <FaPhoneAlt className='text-Ic text-xs' />
+            <data value="number" className='text-white text-xs'>+88 ( 5548 ) 6548</data>
             </div>
             <div className="w-[1px] h-4  bg-bc flex self-center"></div>
 
             <div className="flex items-center px-3 gap-x-1">
-            <MdEmail className='text-Ic' />
-            <data value="gmail" className='text-white'>infoyour@gmail.com</data>
+            <MdEmail className='text-Ic text-xs' />
+            <data value="gmail" className='text-white text-xs'>infoyour@gmail.com</data>
             </div>
             <div className="w-[1px] h-4  bg-bc flex self-center"></div>
             </div>
@@ -39,8 +39,8 @@ const Contact = () => {
           Alt={"flag"}
           className={'w-4 h-3 items-center'}
           />
-          <p className='font-GF text-white text-sm px-1'>English</p>
-          <FaAngleDown className='text-white' />
+          <p className='font-dm text-white text-xs px-1'>English</p>
+          <FaAngleDown className='text-white text-xs' />
           </div>
           <div className="flex gap-2">
           <div className="flex gap-2">
