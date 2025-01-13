@@ -1,74 +1,115 @@
-// import React, { useState, useEffect, useRef } from 'react';
+// // import React, { useState, useEffect, useRef } from 'react';
 
-// const Navbar = () => {
-//   const [activeIndex, setActiveIndex] = useState(0);
-//   const hoverLineRef = useRef(null);
-//   const navRef = useRef(null);
+import { MdGradient } from "react-icons/md"
 
-//   const navItems = [
-//     { name: 'Home', link: '#', active: true },
-//     { name: 'About', link: '#' },
-//     { name: 'Services ▾', link: '#' },
-//     { name: 'Team ▾', link: '#' },
-//     { name: 'Pages', link: '#' },
-//   ];
+// // const Navbar = () => {
+// //   const [activeIndex, setActiveIndex] = useState(0);
+// //   const hoverLineRef = useRef(null);
+// //   const navRef = useRef(null);
 
-//   useEffect(() => {
-//     const activeItem = navRef.current.querySelector('.active');
-//     if (activeItem) {
-//       updateHoverLinePosition(activeItem);
-//     }
-//   }, []);
+// //   const navItems = [
+// //     { name: 'Home', link: '#', active: true },
+// //     { name: 'About', link: '#' },
+// //     { name: 'Services ▾', link: '#' },
+// //     { name: 'Team ▾', link: '#' },
+// //     { name: 'Pages', link: '#' },
+// //   ];
 
-//   const updateHoverLinePosition = (item) => {
-//     const { offsetLeft, offsetWidth } = item;
-//     hoverLineRef.current.style.left = `${offsetLeft}px`;
-//     hoverLineRef.current.style.width = `${offsetWidth}px`;
-//   };
+// //   useEffect(() => {
+// //     const activeItem = navRef.current.querySelector('.active');
+// //     if (activeItem) {
+// //       updateHoverLinePosition(activeItem);
+// //     }
+// //   }, []);
 
-//   const handleMouseEnter = (index, event) => {
-//     setActiveIndex(index);
-//     updateHoverLinePosition(event.target);
-//   };
+// //   const updateHoverLinePosition = (item) => {
+// //     const { offsetLeft, offsetWidth } = item;
+// //     hoverLineRef.current.style.left = `${offsetLeft}px`;
+// //     hoverLineRef.current.style.width = `${offsetWidth}px`;
+// //   };
 
-//   const handleMouseLeave = () => {
-//     const activeItem = navRef.current.querySelector('.active');
-//     if (activeItem) {
-//       updateHoverLinePosition(activeItem);
-//     }
-//   };
+// //   const handleMouseEnter = (index, event) => {
+// //     setActiveIndex(index);
+// //     updateHoverLinePosition(event.target);
+// //   };
 
-//   return (
-//     <div className="relative">
-//       <nav
-//         className="bg-white py-4"
-//         ref={navRef}
-//         onMouseLeave={handleMouseLeave}
-//       >
-//         <ul className="flex justify-center space-x-10 relative">
-//           {navItems.map((item, index) => (
-//             <li key={index}>
-//               <a
-//                 href={item.link}
-//                 className={`font-medium nav-item ${
-//                   item.active ? 'text-orange-500 active' : 'text-black'
-//                 }`}
-//                 onMouseEnter={(e) => handleMouseEnter(index, e)}
-//               >
-//                 {item.name}
-//               </a>
-//             </li>
-//           ))}
-//         </ul>
-//         <div
-//           ref={hoverLineRef}
-//           className="absolute bottom-0 h-[2px] bg-orange-500 transition-all duration-300"
-//         ></div>
-//       </nav>
-//     </div>
-//   );
-// };
+// //   const handleMouseLeave = () => {
+// //     const activeItem = navRef.current.querySelector('.active');
+// //     if (activeItem) {
+// //       updateHoverLinePosition(activeItem);
+// //     }
+// //   };
 
-// export default Navbar;
+// //   return (
+// //     <div className="relative">
+// //       <nav
+// //         className="bg-white py-4"
+// //         ref={navRef}
+// //         onMouseLeave={handleMouseLeave}
+// //       >
+// //         <ul className="flex justify-center space-x-10 relative">
+// //           {navItems.map((item, index) => (
+// //             <li key={index}>
+// //               <a
+// //                 href={item.link}
+// //                 className={`font-medium nav-item ${
+// //                   item.active ? 'text-orange-500 active' : 'text-black'
+// //                 }`}
+// //                 onMouseEnter={(e) => handleMouseEnter(index, e)}
+// //               >
+// //                 {item.name}
+// //               </a>
+// //             </li>
+// //           ))}
+// //         </ul>
+// //         <div
+// //           ref={hoverLineRef}
+// //           className="absolute bottom-0 h-[2px] bg-orange-500 transition-all duration-300"
+// //         ></div>
+// //       </nav>
+// //     </div>
+// //   );
+// // };
 
+// // export default Navbar;
+
+
+// /* Tailwind base classes to style the navbar */
+// .nav-container {
+//     @apply relative;
+//   }
+  
+//   .nav {
+//     @apply flex justify-center space-x-10 relative bg-white py-4;
+//   }
+  
+//   .nav-item {
+//     @apply font-medium text-black hover:text-orange-500 transition-colors duration-300;
+//   }
+  
+//   .nav-item.active {
+//     @apply text-orange-500;
+//   }
+  
+//   /* Hover line styling */
+//   .hover-line {
+//     @apply absolute bottom-0 h-[2px] bg-orange-500 transition-all duration-300;
+//     opacity: 0; /* Hidden by default */
+//   }
+  
+//   .nav-container:hover .hover-line {
+//     opacity: 1; /* Make the line visible when hovering the container */
+//   }
+  
+// Text gradient 
+
+{/* <div class="text-4xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
+  Gradient Text
+</div> */}
+
+// Text gradient hover
+
+{/* <div class="text-4xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text hover:from-green-500 hover:to-yellow-500">
+  Gradient Text
+</div> */}
 
